@@ -5,7 +5,7 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
-                    <a href="#" class="-m-1.5 p-1.5 flex justify-center items-center">
+                    <a href="/" class="-m-1.5 p-1.5 flex justify-center items-center">
                         <img src="{{asset('images/logo_only.png')}}" alt="ViteoFly" width="40">
                         <span class="text-sm/6 font-semibold text-gray-900 dark:text-white">ViteoFly</span>
                     </a>
