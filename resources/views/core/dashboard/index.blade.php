@@ -14,4 +14,9 @@
             </div>
         </div>
     </div>
+
+    <!-- footer -->
+    <x-slot name="footer">
+        @include('layouts.partials.footer')
+    </x-slot>
 </x-app-layout>

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="320"
+     height="320"
+     viewBox="0 0 320 320">
+
+    <!-- Estrella grande -->
+    <polygon
+        points="40,10 48,30 70,30 52,42 60,64 40,50 20,64 28,42 10,30 32,30"
+        fill="#FFD93D"/>
+
+    <!-- Estrella mediana -->
+    <polygon
+        points="250,40 255,52 268,52 258,60 262,74 250,66 238,74 242,60 232,52 245,52"
+        fill="white"/>
+
+    <!-- Destello -->
+    <path
+        d="M150 40 L154 54 L168 58 L154 62 L150 76 L146 62 L132 58 L146 54 Z"
+        fill="#FFFFFF"/>
+
+    <!-- Otra estrella -->
+    <polygon
+        points="90,180 96,194 112,194 99,204 104,220 90,210 76,220 81,204 68,194 84,194"
+        fill="#9EE8FF"/>
+
+    <!-- Destello -->
+    <path
+        d="M250 200 L253 212 L265 215 L253 218 L250 230 L247 218 L235 215 L247 212 Z"
+        fill="#FFE34D"/>
+
+    <!-- Puntos -->
+    <circle cx="200" cy="120" r="3" fill="white"/>
+    <circle cx="40" cy="260" r="4" fill="#FFE34D"/>
+    <circle cx="290" cy="280" r="3" fill="white"/>
+
+</svg>

@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hero-points{
+    background-image:
+        radial-gradient(white 2px, transparent 2px),
+        radial-gradient(#FFE34D 2px, transparent 2px);
+
+    background-size:
+        140px 140px,
+        220px 220px;
+
+    background-position:
+        20px 20px,
+        90px 120px;
+}
+
+.hero-stars {
+    background: url("./assets/stars.svg") repeat;
+    background-size: 600px;
+}
+.hero-globo-red {
+    background: url("./assets/globo_red.svg");
+    background-size: 120px;
+    background-repeat: no-repeat; /* Evita que el globo se multiplique */
+    background-position: top right; /* Coloca el globo arriba a la derecha (puedes cambiarlo) */
+}
+.hero-globo-blue {
+    background: url("./assets/globo_blue.svg");
+    background-size: 120px;
+    background-repeat: no-repeat; /* Evita que el globo se multiplique */
+    background-position: top left; /* Coloca el globo arriba a la izquierda (puedes cambiarlo) */
+}
+.hero-globo-yellow {
+    background: url("./assets/globo_yellow.svg");
+    background-size: 120px;
+    background-repeat: no-repeat; /* Evita que el globo se multiplique */
+    background-position: center left; /* Coloca el globo arriba a la izquierda (puedes cambiarlo) */
+}
+
+.hero-globo-green {
+    background: url("./assets/globo_green.svg");
+    background-size: 120px;
+    background-repeat: no-repeat; /* Evita que el globo se multiplique */
+    background-position: top center; /* Coloca el globo arriba a la izquierda (puedes cambiarlo) */
+}

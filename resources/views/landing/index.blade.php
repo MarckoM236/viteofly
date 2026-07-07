@@ -245,6 +245,6 @@
 
     <!-- footer -->
     <x-slot name="footer">
-        @include('layouts.footer')
+        @include('layouts.partials.footer')
     </x-slot>
 </x-guest-layout>

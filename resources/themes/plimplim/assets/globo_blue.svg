@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 200 250">
+
+    <!-- Globo -->
+    <path
+        d="
+        M100 18
+        C145 18 176 55 176 110
+        C176 152 147 180 110 184
+        L106 196
+        L94 196
+        L90 184
+        C53 180 24 152 24 110
+        C24 55 55 18 100 18
+        Z"
+        fill="#2196F3"
+        stroke="#111"
+        stroke-width="5"/>
+
+    <!-- Brillo -->
+    <path
+        d="
+        M63 55
+        C50 74 48 104 58 130"
+        fill="none"
+        stroke="#FFFFFF"
+        stroke-width="8"
+        stroke-linecap="round"/>
+
+    <!-- Punto de brillo -->
+    <circle
+        cx="77"
+        cy="48"
+        r="6"
+        fill="#FFFFFF"/>
+
+    <!-- Nudo -->
+    <polygon
+        points="94,196 106,196 100,208"
+        fill="#1976D2"
+        stroke="#111"
+        stroke-width="4"
+        stroke-linejoin="round"/>
+
+    <!-- Hilo -->
+    <path
+        d="
+        M100 208
+        C96 220 112 232 100 245"
+        fill="none"
+        stroke="#111"
+        stroke-width="4"
+        stroke-linecap="round"/>
+
+</svg>

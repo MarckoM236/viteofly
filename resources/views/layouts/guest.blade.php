@@ -19,7 +19,7 @@
     </head>
     <body class="font-sans text-gray-900 antialiased">
         <div class="min-h-screen bg-gray-100 dark:bg-gray-900 flex flex-col">
-            @include('layouts.navigation')
+            @include('layouts.partials.navigation')
 
             <!-- Page Heading -->
             @if (isset($header))
