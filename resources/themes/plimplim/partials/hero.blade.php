@@ -22,7 +22,7 @@
     <div class="relative z-10 flex items-center justify-center h-screen">
 
         <!-- Plim Plim -->
-        <div class="w-[50%]">
+        <div class="w-[35%]">
             <img
             src="{{ asset('storage/themes/plimplim/images/plimplin-hero.png') }}"
             alt="Plim Plim"
@@ -31,15 +31,15 @@
         
 
         <!-- main content -->
-        <div class="flex flex-col items-center text-center justify-center w-[30%]">
+        <div class="flex flex-col items-center text-center justify-center w-[40%]">
 
             <!-- Icon -->
             <img src="{{ asset('storage/themes/plimplim/images/logo-hero.png') }}"
                 alt="Plim Plim"
-                class="w-[130px]">
+                class="w-[6rem]">
 
             <!-- Banner -->
-            <div class="relative w-[560px] h-28">
+            <div class="relative lg:w-full md:w-full w-[200%] max-w-[280px] sm:max-w-[400px] md:max-w-[560px] h-20 md:h-28 mt-2">
 
                 <img
                     src="{{ asset('storage/themes/plimplim/images/banner-hero.png') }}"
@@ -56,57 +56,67 @@
                             uppercase
                             tracking-wide
                             drop-shadow-[0_2px_2px_rgba(0,0,0,.25)]
-                            h-[85px]">
+                            md:text-2xl lg:text-4xl
+                            max-w-full break-words
+                            md:h-[90%] lg:h-[70%] h-100">
                     ¡ESTÁS INVITADO!
                 </span>
 
             </div>
 
 
+            <!-- Main text content -->
+            <div class="w-full mt-4">
+                <!-- Subtitle -->
+                <p class="text-blue-900 font-black text-xl sm:text-2xl md:text-4xl uppercase max-w-full break-words tracking-wide">
+                    A MI CUMPLEAÑOS
+                </p>
 
-            <!-- Subtitle -->
-            <p class="mt-4 text-blue-900 font-black text-4xl uppercase">
-                A MI CUMPLEAÑOS
-            </p>
-
-            <!-- name -->
-            <h1 class="relative font-sans text-8xl font-black tracking-wider uppercase select-none filter drop-shadow-[0_10px_0_#E43B30]">
-                <!-- Capa 3: El borde blanco grueso (Se simula duplicando el texto detrás) -->
-                <span class="absolute inset-0 text-[#FFD126]" style="-webkit-text-stroke: 24px white;">
-                    Antonella
-                </span>
-                <!-- Capa 2: El centro amarillo que tapa el borde interno -->
-                <span class="relative text-[#FFD126]">
-                    Antonella
-                </span>
-            </h1>
+                <div class="w-[100%]">
+                    <!-- name -->
+                    <h1 class="relative font-sans text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-wider uppercase select-none 
+                    filter drop-shadow-[0_4px_0_#E43B30] md:drop-shadow-[0_10px_0_#E43B30] 
+                    max-w-full break-words mt-1 flex items-center justify-center leading-none h-12 sm:h-24">
+                        
+                        <!-- bg white -->
+                        <span class="absolute inset-0 flex items-center justify-center text-transparent font-black leading-none
+                                    [-webkit-text-stroke:6px_white] [text-stroke:6px_white]
+                                    sm:[-webkit-text-stroke:12px_white] sm:[text-stroke:12px_white]
+                                    md:[-webkit-text-stroke:24px_white] md:[text-stroke:24px_white]">
+                            Antonella
+                        </span>
+                        
+                        <!-- bg yellow -->
+                        <span class="relative text-[#FFD126] font-black leading-none z-10">
+                            Antonella
+                        </span>
+                    </h1>
+                </div>
+                
+            </div>
 
             <!-- Separator -->
-            <div class="flex items-center gap-4 mt-6">
+            <div class="flex items-center gap-4 mt-6 w-full justify-center">
 
-                <div class="w-40 h-1 bg-blue-500 rounded-full"></div>
+                <div class="w-20 md:w-40 h-1 bg-blue-500 rounded-full"></div>
 
                 <img src="{{ asset('storage/themes/plimplim/images/stars_red.svg') }}"
-                    class="w-8">
+                    class="w-6 md:w-8">
 
-                <div class="w-40 h-1 bg-blue-500 rounded-full"></div>
+                <div class="w-20 md:w-40 h-1 bg-blue-500 rounded-full"></div>
 
             </div>
 
             <!-- Message -->
 
-            <p class="mt-6 text-blue-900 text-4xl font-bold leading-tight">
-
-                ¡Ven a celebrar<br>
-
-                un día lleno de diversión!
-
+            <p class="mt-4 md:mt-6 text-blue-900 text-lg sm:text-2xl md:text-4xl font-bold leading-tight max-w-full break-words">
+                ¡Ven a celebrar<br class="hidden sm:inline"> un día lleno de diversión!
             </p>
 
         </div>
 
         <!-- Acuarela -->
-        <div class="w-[20%] self-end mb-12">
+        <div class="w-[25%] self-end mb-12">
             <img
                 src="{{ asset('storage/themes/plimplim/images/acuarela-hero.png') }}"
                 alt="Acuarela"
