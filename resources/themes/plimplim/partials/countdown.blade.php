@@ -36,7 +36,7 @@
                 </div>
 
                 <div class="bg-orange-50 rounded-xl shadow-sm border border-orange-100 p-3 flex flex-col items-center">
-                    <i class="fas fa-music text-2xl text-blue-400 mb-1"></i>
+                    <i class="fas fa-heart text-2xl text-red-500 mb-1"></i>
                     <span class="text-2xl md:text-4xl lg:text-4xl font-extrabold text-red-600 leading-none">37</span>
                     <span class="text-xs md:text-2xs lg:text-2xs font-bold uppercase text-blue-700 tracking-wide truncate max-w-full">
                         Minutos
@@ -44,9 +44,9 @@
                 </div>
 
                 <div class="bg-orange-50 rounded-xl shadow-sm border border-orange-100 p-3 flex flex-col items-center">
-                    <span class="text-2xl">🎵</span>
+                    <i class="fas fa-music text-2xl text-blue-400 mb-1"></i>
                     <span class="text-2xl md:text-4xl lg:text-4xl font-extrabold text-blue-600 leading-none">42</span>
-                    <span class="text-xs font-bold uppercase text-blue-700 tracking-wide truncate max-w-full">
+                    <span class="text-xs md:text-2xs lg:text-2xs font-bold uppercase text-blue-700 tracking-wide truncate max-w-full">
                         Segundos
                     </span>
                 </div>
