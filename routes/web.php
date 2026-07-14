@@ -29,6 +29,10 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('/invitations/{invitationId}', [InvitationController::class, 'show'])->name('invitations.show');
+//Invitations
+Route::get('invitations', [InvitationController::class, 'index'])->name('invitation.index');
+Route::get('invitation/create', [InvitationController::class, 'create'])->name('invitation.create');
+Route::post('invitation/create', [InvitationController::class, 'store'])->name('invitation.store');
+Route::get('/invitation/{invitationId}', [InvitationController::class, 'show'])->name('invitation.show');
 
 require __DIR__.'/auth.php';

@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'id' => 'plimplim',
+    'slug' => 'plimplim',
     'name' => 'Payaso Plimplim',
     'description' => 'Tema colorido inspirado en una fiesta infantil..',
     'version' => '1.0.0',

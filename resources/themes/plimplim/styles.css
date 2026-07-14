@@ -24,25 +24,25 @@
 .hero-globo-red {
     background: url("./assets/globo_red.svg");
     background-size: 120px;
-    background-repeat: no-repeat; /* Evita que el globo se multiplique */
-    background-position: top right; /* Coloca el globo arriba a la derecha (puedes cambiarlo) */
+    background-repeat: no-repeat; 
+    background-position: top right; 
 }
 .hero-globo-blue {
     background: url("./assets/globo_blue.svg");
     background-size: 120px;
-    background-repeat: no-repeat; /* Evita que el globo se multiplique */
-    background-position: top left; /* Coloca el globo arriba a la izquierda (puedes cambiarlo) */
+    background-repeat: no-repeat; 
+    background-position: top left; 
 }
 .hero-globo-yellow {
     background: url("./assets/globo_yellow.svg");
     background-size: 120px;
-    background-repeat: no-repeat; /* Evita que el globo se multiplique */
-    background-position: center left; /* Coloca el globo arriba a la izquierda (puedes cambiarlo) */
+    background-repeat: no-repeat; 
+    background-position: center left; 
 }
 
 .hero-globo-green {
     background: url("./assets/globo_green.svg");
     background-size: 120px;
-    background-repeat: no-repeat; /* Evita que el globo se multiplique */
-    background-position: top center; /* Coloca el globo arriba a la izquierda (puedes cambiarlo) */
+    background-repeat: no-repeat; 
+    background-position: top center; 
 }
