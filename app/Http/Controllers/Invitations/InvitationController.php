@@ -3,35 +3,40 @@
 namespace App\Http\Controllers\Invitations;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\InvitationCreate;
 use App\Services\InvitationService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class InvitationController extends Controller
 {
-    public function index(){
-        return view('core.invitations.index');
+    public function index(InvitationService $invitation){
+        $invitations = $invitation->getAllinvitations();
+        return view('core.invitations.index', compact('invitations'));
     }
     public function create(){
         return view('core.invitations.create');
     }
 
-    public function store(Request $request, InvitationService $invitation){
+    public function store(InvitationCreate $request, InvitationService $invitation){
+    
+    $data = $request->validated();
+
         try {
             $invitation_data = [
-                "user_id"=>Auth::user()->id,
-                "template_id"=>1,
-                "title"=> $request->title,
-                "slug"=>'cumple',
+                "user_id"=> Auth::user()->id,
+                "template_id"=>$data['template_id'],
+                "title"=> $data['title'],
+                "slug"=>$data['slug'],
                 "data"=> json_encode([
-                    "event"=>$request->event,
-                    "dateEvent"=>$request->date_event,
-                    "addressEvent"=>$request->address_event,
-                    "placeEvent"=>$request->place_event,
-                    "ubicationEvent"=>$request->ubication_event,
-                    "celebrant"=>$request->celebrant,
-                    "messageHero"=>$request->message_hero,
-                    "messageFooter"=>$request->message_footer
+                    "event"=>$data['event'],
+                    "dateEvent"=>$data['date_event'],
+                    "addressEvent"=>$data['address_event'],
+                    "placeEvent"=>$data['place_event'],
+                    "ubicationEvent"=>$data['ubication_event'],
+                    "celebrant"=>$data['celebrant'],
+                    "messageHero"=>$data['message_hero'],
+                    "messageFooter"=>$data['message_footer']
 
                 ]),
             ];
@@ -42,10 +47,9 @@ class InvitationController extends Controller
             ->route('invitation.index')
             ->with('success', 'Invitación creada.');
         } catch (\Throwable $th) {
-            dd($th);
             return back()
             ->withInput()
-            ->with('error', 'No fue posible crear la invitación.');
+            ->with('error', 'No fue posible crear la invitación. '.$th);
         }
         
     }
