@@ -29,6 +29,7 @@
         pointer-events-none">
     </div>
 
+    <div id="rsvp" data-date="{{ $invitation['date_event'] }}"></div>
     <div class="relative z-10 flex items-end justify-between h-[100%] pb-1">
 
         <div class="w-[50%] h-auto">
@@ -46,8 +47,8 @@
                         </div>
                         <!-- Text -->
                         <div class="flex flex-col">
-                            <span class="text-blue-900 font-extrabold text-base leading-tight">Sábado</span>
-                            <span class="text-blue-900 font-bold text-sm leading-tight text-opacity-80">20 de Julio 2024</span>
+                            <span class="text-blue-900 font-extrabold text-base leading-tight" id="rsvp-weekday">Sábado</span>
+                            <span class="text-blue-900 font-bold text-sm leading-tight text-opacity-80" id="rsvp-date">20 de Julio 2024</span>
                         </div>
                     </div>
 
@@ -59,7 +60,7 @@
                         </div>
                         <!-- Texto -->
                         <div>
-                            <span class="text-blue-900 font-extrabold text-base">3:00 PM</span>
+                            <span class="text-blue-900 font-extrabold text-base" id="rsvp-time">3:00 PM</span>
                         </div>
                     </div>
 
@@ -71,10 +72,8 @@
                         </div>
                         <!-- Textos de dirección en bloque vertical -->
                         <div class="flex flex-col">
-                            <span class="text-blue-900 font-extrabold text-base leading-tight">Salón de Fiestas</span>
-                            <span class="text-blue-900 font-extrabold text-base leading-tight">Aventura Kids</span>
-                            <span class="text-blue-900 font-bold text-sm leading-tight text-opacity-80 mt-1">Av. Los Sueños 123</span>
-                            <span class="text-blue-900 font-bold text-sm leading-tight text-opacity-80">Ciudad Alegre</span>
+                            <span class="text-blue-900 font-extrabold text-base leading-tight">{{$invitation['place_event']}}</span>
+                            <span class="text-blue-900 font-bold text-sm leading-tight text-opacity-80 mt-1">{{$invitation['address_event']}}</span>
                         </div>
                     </div>
 

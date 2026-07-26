@@ -69,7 +69,7 @@
             <div class="w-full mt-4">
                 <!-- Subtitle -->
                 <p class="text-blue-900 font-black text-xl sm:text-2xl md:text-4xl uppercase max-w-full break-words tracking-wide">
-                    A MI CUMPLEAÑOS
+                    {{$invitation['event']}}
                 </p>
 
                 <div class="w-[100%]">
@@ -83,12 +83,12 @@
                                     [-webkit-text-stroke:6px_white] [text-stroke:6px_white]
                                     sm:[-webkit-text-stroke:12px_white] sm:[text-stroke:12px_white]
                                     md:[-webkit-text-stroke:24px_white] md:[text-stroke:24px_white]">
-                            Antonella
+                            {{$invitation['name']}}
                         </span>
                         
                         <!-- bg yellow -->
                         <span class="relative text-[#FFD126] font-black leading-none z-10">
-                            Antonella
+                            {{$invitation['name']}}
                         </span>
                     </h1>
                 </div>
@@ -110,7 +110,7 @@
             <!-- Message -->
 
             <p class="mt-4 md:mt-6 text-blue-900 text-lg sm:text-2xl md:text-4xl font-bold leading-tight max-w-full break-words">
-                ¡Ven a celebrar<br class="hidden sm:inline"> un día lleno de diversión!
+                {{$invitation['message_hero']}}
             </p>
 
         </div>

@@ -11,8 +11,13 @@ class InvitationService{
         return $invitation;
     }
 
-    public function getInvitation(int $invitationId):Invitation{
-        $invitation= Invitation::find($invitationId);
+    public function getDetailInvitation(int $invitationId):Collection{
+        $invitation= Invitation::leftJoin('templates as tmp','invitations.template_id','=','tmp.id')
+        ->where('invitations.id',$invitationId)
+        ->where('invitations.status','published')
+        ->where('tmp.is_active',1)
+        ->select('tmp.folder','tmp.slug','invitations.data')
+        ->get();
         return $invitation;
     }
 
@@ -20,4 +25,5 @@ class InvitationService{
         $invitations = Invitation::all();
         return $invitations;
     }
+
 }

@@ -56,16 +56,22 @@ class InvitationController extends Controller
     
     public function show(int $invitationId, InvitationService $invitation)
     {
-        $invitation = $invitation->getInvitation($invitationId);
-        $invitation = [
-            'id' => $invitationId,
-            'name' => 'John Doe',
-            'event' => 'Birthday Party',
-            'date' => '2024-07-15',
-            'location' => '123 Party Lane, Fun City',
-            'theme' => 'plimplim',
-        ];
+        $invitation = $invitation->getDetailInvitation($invitationId);
+        $arr_invitation = $invitation->map(function ($item, $key) {
+            $data = json_decode($item['data'], true);
+            return [
+                'name' => $data['celebrant'],
+                'event'=> $data['event'],
+                'date_event'=> $data['dateEvent'],
+                'place_event'=> $data['placeEvent'],
+                'address_event'=> $data['addressEvent'],
+                'message_hero'=> $data['messageHero'],
+                'folder' => $item['folder'],
+                'theme' => $item['slug']
+            ];
+        });
+        
 
-        return view('core.invitations.show', compact('invitation'));
+        return view('core.invitations.show', compact('arr_invitation'));
     }
 }

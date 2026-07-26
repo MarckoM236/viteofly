@@ -47,7 +47,7 @@
                     <!-- Date event -->
                     <div class="mt-4">
                         <x-input-label for="date_event" :value="__('Date event')" />
-                        <x-text-input id="date_event" class="block mt-1 w-full" type="date" name="date_event" :value="old('date_event')" required autocomplete="date_event" />
+                        <x-text-input id="date_event" class="block mt-1 w-full" type="datetime-local" name="date_event" :value="old('date_event')" required autocomplete="date_event" step="1" />
                         <x-input-error :messages="$errors->get('date_event')" class="mt-2" />
                     </div>
 
