@@ -8,8 +8,6 @@ export default defineConfig({
                 'resources/css/app.css',
                 'resources/js/app.js',
                 
-                'resources/themes/**/styles.css',
-                'resources/themes/**/functions.js',
                 'resources/themes/themes.js'
             ],
             refresh: true,

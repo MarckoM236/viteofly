@@ -1,3 +1,6 @@
+import L from 'leaflet';
+import 'leaflet/dist/leaflet.css';
+
 export function initRsvp() {
     const container = document.getElementById('rsvp');
 

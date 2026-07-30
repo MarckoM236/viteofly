@@ -80,7 +80,7 @@
                 </div>
 
                 <!-- Btn -->
-                <a href="#" class="flex items-center justify-center gap-2 w-[70%] bg-blue-600 hover:bg-blue-700 text-white font-black uppercase text-sm p-2 rounded-full shadow-md tracking-wider transition-colors duration-200 mt-1">
+                <a href="#" class="flex items-center justify-center gap-2 w-[70%] bg-blue-600 hover:bg-blue-700 text-white font-black uppercase text-sm p-2 rounded-full shadow-md tracking-wider transition-colors duration-200 mt-1" id="open-modal-rsvp">
                     <i class="fas fa-map-marker-alt text-xs not-italic"></i>
                     Ver en mapa
                 </a>
@@ -96,5 +96,6 @@
             class="w-[100%] lg:w-[80%] h-auto ">
         </div>
     </div>
-
+@include('themes::components.modal',['id' => 'modal-map',
+    'title' => 'Ubicacion',])
 </section>
