@@ -20,4 +20,9 @@ return [
         'rsvp' => 'rsvp',
         'footer' => 'footer',
     ],
+    'footer_form'=> [
+        'name'=>'text',
+        'attendees'=>'int',
+        'message'=>'text'
+    ]
 ];

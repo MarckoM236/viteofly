@@ -24,7 +24,7 @@
                     ¡Confirma tu asistencia!
                 </p>
                 <p class="text-1xs text-blue-800 leading-none m-1">
-                    Nos hára muy felices contar con tigo
+                    {{$invitation['message_hero']}}
                 </p>
             </div>
             
@@ -33,7 +33,8 @@
         <!-- confirm -->
         <div class="w-[80%] h-auto flex justify-end p1 md:w-[60%]  lg:w-[60%]">
             <div class="bg-white rounded-3xl p-2 shadow-md max-w-sm w-full border border-gray-100/50 flex flex-col gap-2 relative mx-auto">
-                <form action="#" class="flex flex-col gap-2">
+                <form action="{{ route('confirmation.store', $invitation['id']) }}" class="flex flex-col gap-2" method="POST">
+                    @csrf
                     <!-- INPUT 1: Name -->
                     <div class="flex items-center gap-3 w-full">
                         <!-- User icon -->
@@ -43,7 +44,8 @@
                         <!-- Text field -->
                         <input type="text" 
                             placeholder="Nombre del invitado" 
-                            class="w-full px-4 py-2 border border-gray-200 rounded-full text-sm font-medium placeholder-gray-400 focus:outline-none focus:border-blue-500 shadow-[inset_0_2px_4px_rgba(0,0,0,0.03)] bg-gray-50/30">
+                            class="w-full px-4 py-2 border border-gray-200 rounded-full text-sm font-medium placeholder-gray-400 focus:outline-none focus:border-blue-500 shadow-[inset_0_2px_4px_rgba(0,0,0,0.03)] bg-gray-50/30"
+                            name="name">
                     </div>
 
                     <!-- INPUT 2: CUÁNTOS ASISTIRÁN -->
@@ -53,9 +55,10 @@
                             <i class="fas fa-users not-italic"></i>
                         </div>
                         <!-- Number field-->
-                        <input type="text" 
+                        <input type="number" 
                             placeholder="¿Cuántos asistirán?" 
-                            class="w-full px-4 py-2 border border-gray-200 rounded-full text-sm font-medium placeholder-gray-400 focus:outline-none focus:border-blue-500 shadow-[inset_0_2px_4px_rgba(0,0,0,0.03)] bg-gray-50/30">
+                            class="w-full px-4 py-2 border border-gray-200 rounded-full text-sm font-medium placeholder-gray-400 focus:outline-none focus:border-blue-500 shadow-[inset_0_2px_4px_rgba(0,0,0,0.03)] bg-gray-50/30"
+                            name="attendees">
                     </div>
 
                     <!-- INPUT 3: Optional message -->
@@ -67,7 +70,8 @@
                         <!-- Text field -->
                         <input type="text" 
                             placeholder="Escribe tu mensaje (opcional)" 
-                            class="w-full px-4 py-2 border border-gray-200 rounded-full text-sm font-medium placeholder-gray-400 focus:outline-none focus:border-blue-500 shadow-[inset_0_2px_4px_rgba(0,0,0,0.03)] bg-gray-50/30">
+                            class="w-full px-4 py-2 border border-gray-200 rounded-full text-sm font-medium placeholder-gray-400 focus:outline-none focus:border-blue-500 shadow-[inset_0_2px_4px_rgba(0,0,0,0.03)] bg-gray-50/30"
+                            name="message">
                     </div>
 
                     <!-- Button -->

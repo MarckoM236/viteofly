@@ -60,12 +60,15 @@ class InvitationController extends Controller
         $arr_invitation = $invitation->map(function ($item, $key) {
             $data = json_decode($item['data'], true);
             return [
+                'id'=> $item['id'],
                 'name' => $data['celebrant'],
                 'event'=> $data['event'],
                 'date_event'=> $data['dateEvent'],
                 'place_event'=> $data['placeEvent'],
                 'address_event'=> $data['addressEvent'],
+                'ubication_event'=> $data['ubicationEvent'],
                 'message_hero'=> $data['messageHero'],
+                'message_footer'=>$data['messageFooter'],
                 'folder' => $item['folder'],
                 'theme' => $item['slug']
             ];
