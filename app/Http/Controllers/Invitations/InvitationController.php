@@ -61,6 +61,8 @@ class InvitationController extends Controller
             $data = json_decode($item['data'], true);
             return [
                 'id'=> $item['id'],
+                'title'=> $item['title'],
+                'description'=> $item['description'],
                 'name' => $data['celebrant'],
                 'event'=> $data['event'],
                 'date_event'=> $data['dateEvent'],

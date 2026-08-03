@@ -33,7 +33,7 @@
         <!-- confirm -->
         <div class="w-[80%] h-auto flex justify-end p1 md:w-[60%]  lg:w-[60%]">
             <div class="bg-white rounded-3xl p-2 shadow-md max-w-sm w-full border border-gray-100/50 flex flex-col gap-2 relative mx-auto">
-                <form action="{{ route('confirmation.store', $invitation['id']) }}" class="flex flex-col gap-2" method="POST">
+                <form action="{{ route('confirmation.store', $invitation['id']) }}" class="flex flex-col gap-2" method="POST" id="form-confirmation">
                     @csrf
                     <!-- INPUT 1: Name -->
                     <div class="flex items-center gap-3 w-full">

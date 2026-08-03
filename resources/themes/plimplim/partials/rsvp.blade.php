@@ -29,7 +29,11 @@
         pointer-events-none">
     </div>
 
+    <!-- data -->
     <div id="rsvp" data-date="{{ $invitation['date_event'] }}"></div>
+    <div id="location" data-location="{{ $invitation['ubication_event'] }}"></div>
+    <!-- end data -->
+
     <div class="relative z-10 flex items-end justify-between h-[100%] pb-1">
 
         <div class="w-[50%] h-auto">

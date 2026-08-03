@@ -42,6 +42,12 @@
 
     @vite($config['assets'])
     @vite(['resources/themes/themes.js'])
+
+    <!-- Basic configuration Open Graph -->
+    <meta property="og:title" content="{{$invitation['title']}}" />
+    <meta property="og:description" content="{{$invitation['description']}}" />
+    <meta property="og:url" content="{{ request()->fullUrl() }}" />
+    <meta property="og:type" content="website" />
 </head>
 <body>
      <!-- content sections -->

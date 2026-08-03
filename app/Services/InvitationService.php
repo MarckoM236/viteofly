@@ -16,7 +16,7 @@ class InvitationService{
         ->where('invitations.id',$invitationId)
         ->where('invitations.status','published')
         ->where('tmp.is_active',1)
-        ->select('tmp.folder','tmp.slug','invitations.data', 'invitations.id')
+        ->select('tmp.folder','tmp.slug','invitations.data', 'invitations.id', 'invitations.title', 'invitations.description')
         ->get();
         return $invitation;
     }
